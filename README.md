@@ -4,7 +4,7 @@
 Talmage Winters, 
 Silas Riday, 
 Jason Hollingsworth, 
-Thomas Moore, 
+Thomas Moore 
 
 ## Software Description
 
