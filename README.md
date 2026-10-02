@@ -1,15 +1,15 @@
 # Digi-Chest
 
 ## Team Members
-Talmage Winters
-Silas Riday
-Jason Hollingsworth
-Thomas Moore
+Talmage Winters, 
+Silas Riday, 
+Jason Hollingsworth, 
+Thomas Moore, 
 
 ## Software Description
 
 ## Architecture
-Typescript
+Typescript, 
 React Native
 
 ## Software Features
@@ -19,7 +19,7 @@ React Native
 * [ ] Keep going ....
 
 ## Team Communication
-Microsoft Teams
+Microsoft Teams, 
 MMS Groupchat
 
 ## Team Responsibility
