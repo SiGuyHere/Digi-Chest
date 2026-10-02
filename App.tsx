@@ -30,7 +30,7 @@ const screens: Record<TabName, { title: string; description: string; icon: IconN
   },
   Leaderboard: {
     title: 'Leaderboard',
-    description: 'Keep all of your favorite things together here.',
+    description: 'Compare how well you are doing vs the top players or your friends.',
     icon: 'treasure-chest-outline',
   },
   Settings: {
