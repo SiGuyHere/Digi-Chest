@@ -1,10 +1,36 @@
 # Digi-Chest
 
-## VSCode Extentions Used
-- Expo Tools (expo.vscode-expo-tools
-)
-- ES7+ React/Redux/React-Native snippets (dsznajder.es7-react-js-snippets
-)
-- ESLint (dbaeumer.vscode-eslint)
-- Prettier - Code Formatter (esbenp.prettier-vscode)
-- Error Lens (usernamehw.errorlens)
+## Team Members
+Talmage Winters
+Silas Riday
+Jason Hollingsworth
+Thomas Moore
+
+## Software Description
+
+## Architecture
+Typescript
+React Native
+
+## Software Features
+
+* [ ] First feature here
+* [ ] Second feature here
+* [ ] Keep going ....
+
+## Team Communication
+Microsoft Teams
+MMS Groupchat
+
+## Team Responsibility
+
+|Responsibility                      |Team Member(s)              |
+|------------------------------------|----------------------------|
+|Conducting Meetings                 |                            |
+|Maintaining Team Assignment List    |                            |
+|Ensuring GitHub is Working          |                            |
+|Maintaining Documentation           |                            |
+|Create & Display Presentations      |                            |
+|Submit Team Assignments             |                            |
+
+## Reflections
