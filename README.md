@@ -12,6 +12,7 @@ Digi-Chest is currently a blank Expo and React Native starter project. The appli
 
 - React Native
 - Expo
+- Expo Router (navigation)
 - TypeScript
 - React Native Web
 - VS Code
@@ -71,7 +72,16 @@ npm run typecheck
 
 ```text
 Digi-Chest/
-├── App.tsx          # Main application component
+├── app/                      # Screens (Expo Router: each file is a route)
+│   ├── _layout.tsx           # Root layout
+│   └── (tabs)/               # Pages shown in the bottom tab bar
+│       ├── _layout.tsx       # Tab bar setup (order, titles, icons)
+│       ├── index.tsx         # Interactive Map page
+│       ├── leaderboard.tsx   # Leaderboard page
+│       ├── marketplace.tsx   # Marketplace page
+│       └── settings.tsx      # Settings page
+├── components/      # Reusable UI components
+├── constants/       # Shared values such as colors
 ├── app.json         # Expo application configuration
 ├── package.json     # Dependencies and scripts
 ├── tsconfig.json    # TypeScript configuration
