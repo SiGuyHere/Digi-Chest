@@ -6,4 +6,5 @@ export const colors = {
   text: '#f8fafc',
   textMuted: '#94a3b8',
   accent: '#facc15',
+  danger: '#fb7185',
 };
