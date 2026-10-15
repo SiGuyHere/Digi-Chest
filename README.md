@@ -8,13 +8,9 @@ The Expo app is connected to Firebase Data Connect. `App.tsx` loads the public i
 
 ## Technology
 
-<<<<<<< HEAD
-- Expo and React Native
-=======
 - React Native
 - Expo
 - Expo Router (navigation)
->>>>>>> 1a4426810a949e64ce7c28e6ef62d5743a6fc783
 - TypeScript
 - React Native Web
 - Firebase Data Connect
@@ -32,20 +28,6 @@ Use `npm run android`, `npm run ios`, or `npm run web` for a specific target. Ru
 
 ```text
 Digi-Chest/
-<<<<<<< HEAD
-├── App.tsx                              # Mobile app entry point
-├── app.json                             # Expo configuration
-├── firebase.json                        # Firebase/Data Connect CLI configuration
-├── .firebaserc                          # Firebase project association
-├── dataconnect/
-│   ├── dataconnect.yaml                 # Service and Cloud SQL configuration
-│   ├── schema/schema.gql                # Database tables and relationships
-│   ├── example/connector.yaml           # SDK generation configuration
-│   ├── example/queries.gql              # App queries and mutations
-│   └── seed_data.gql                    # Optional demo data
-├── src/firebase.ts                       # Firebase and Data Connect initialization
-└── src/dataconnect-generated/            # Generated, typed Data Connect SDK
-=======
 ├── app/                      # Screens (Expo Router: each file is a route)
 │   ├── _layout.tsx           # Root layout
 │   └── (tabs)/               # Pages shown in the bottom tab bar
@@ -56,11 +38,12 @@ Digi-Chest/
 │       └── settings.tsx      # Settings page
 ├── components/      # Reusable UI components
 ├── constants/       # Shared values such as colors
+├── src/firebase.ts   # Firebase and Data Connect initialization
+├── dataconnect/      # Data Connect schema and operations
 ├── app.json         # Expo application configuration
 ├── package.json     # Dependencies and scripts
 ├── tsconfig.json    # TypeScript configuration
 └── README.md        # Project documentation
->>>>>>> 1a4426810a949e64ce7c28e6ef62d5743a6fc783
 ```
 
 The schema, connector, operations, and seed data are kept separate because Firebase Data Connect treats them as different inputs. The operations can remain together in `queries.gql`; split them into more files only when the file becomes difficult to navigate.
