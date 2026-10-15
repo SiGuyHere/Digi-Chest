@@ -2,7 +2,7 @@
   "name": "digi-chest",
   "version": "1.0.0",
   "private": true,
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -11,13 +11,24 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@dataconnect/generated": "file:src/dataconnect-generated",
     "@tanstack-query-firebase/react": "^2.0.0",
     "expo": "^57.0.27",
     "firebase": "^12.11.0",
+=======
+    "@expo/vector-icons": "^15.0.2",
+    "expo": "^57.0.27",
+    "expo-constants": "~57.0.21",
+    "expo-linking": "~57.0.12",
+    "expo-router": "~57.0.25",
+    "expo-status-bar": "~57.0.1",
+>>>>>>> 1a4426810a949e64ce7c28e6ef62d5743a6fc783
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
     "react-native-web": "^0.21.0"
   },
   "devDependencies": {
