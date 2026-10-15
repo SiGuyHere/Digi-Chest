@@ -1,0 +1,87 @@
+mutation CreateUser($username: String!, $email: String!, $avatarUrl: String, $bio: String) @auth(level: USER) {
+  user_insert(data: { id_expr: "auth.uid", username: $username, email: $email, avatarUrl: $avatarUrl, bio: $bio })
+}
+
+mutation UpdateUser($username: String, $email: String, $avatarUrl: String, $bio: String) @auth(level: USER) {
+  user_update(key: { id_expr: "auth.uid" }, data: { username: $username, email: $email, avatarUrl: $avatarUrl, bio: $bio })
+}
+
+mutation DeleteUser @auth(level: USER) {
+  user_delete(key: { id_expr: "auth.uid" })
+}
+
+query GetUser @auth(level: USER) {
+  user(key: { id_expr: "auth.uid" }) {
+    username
+    email
+    avatarUrl
+    bio
+  }
+}
+
+query ListUsers @auth(level: PUBLIC, insecureReason: "Public user directory") {
+  users {
+    id
+    username
+  }
+}
+
+mutation CreateItem($name: String!, $latitude: Float!, $longitude: Float!, $rarity: String!, $description: String, $imageUrl: String) @auth(level: PUBLIC, insecureReason: "Publicly accessible game items") {
+  item_insert(data: { name: $name, latitude: $latitude, longitude: $longitude, rarity: $rarity, description: $description, imageUrl: $imageUrl })
+}
+
+mutation UpdateItem($id: UUID!, $description: String) @auth(level: PUBLIC, insecureReason: "Publicly updateable game items") {
+  item_update(key: { id: $id }, data: { description: $description })
+}
+
+mutation DeleteItem($id: UUID!) @auth(level: PUBLIC, insecureReason: "Publicly deletable game items") {
+  item_delete(key: { id: $id })
+}
+
+query GetItem($id: UUID!) @auth(level: PUBLIC, insecureReason: "Publicly readable game items") {
+  item(id: $id) {
+    name
+    rarity
+    description
+  }
+}
+
+query ListItems @auth(level: PUBLIC, insecureReason: "Publicly readable game items") {
+  items {
+    id
+    name
+  }
+}
+
+mutation CollectItem($itemId: UUID!) @auth(level: USER) {
+  inventory_insert(data: { userId_expr: "auth.uid", itemId: $itemId, dateCollected_expr: "request.time" })
+}
+
+mutation RemoveItemFromInventory($id: UUID!) @auth(level: USER) {
+  inventory_delete(key: { id: $id })
+}
+
+query MyInventory @auth(level: USER) {
+  inventories(where: { userId: { eq_expr: "auth.uid" } }) {
+    item {
+      name
+      rarity
+    }
+    dateCollected
+  }
+}
+
+mutation LogLocation($itemId: UUID!, $latitude: Float!, $longitude: Float!) @auth(level: PUBLIC, insecureReason: "Logging global game state") {
+  locationLog_insert(data: { itemId: $itemId, latitude: $latitude, longitude: $longitude })
+}
+
+mutation DeleteLocationLog($id: UUID!) @auth(level: PUBLIC, insecureReason: "Public cleanup of logs") {
+  locationLog_delete(key: { id: $id })
+}
+
+query GetItemLogs($itemId: UUID!) @auth(level: PUBLIC, insecureReason: "Publicly viewable item history") {
+  locationLogs(where: { itemId: { eq: $itemId } }) {
+    latitude
+    longitude
+  }
+}

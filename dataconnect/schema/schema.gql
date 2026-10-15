@@ -1,0 +1,27 @@
+type User @table {
+  username: String!
+  email: String!
+  avatarUrl: String
+  bio: String
+}
+
+type Item @table {
+  name: String!
+  latitude: Float!
+  longitude: Float!
+  rarity: String!
+  description: String
+  imageUrl: String
+}
+
+type Inventory @table {
+  user: User!
+  item: Item!
+  dateCollected: Timestamp!
+}
+
+type LocationLog @table {
+  item: Item!
+  latitude: Float!
+  longitude: Float!
+}

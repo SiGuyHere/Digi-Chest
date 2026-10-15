@@ -1,0 +1,82 @@
+mutation CreateDemoData @transaction {
+  user_insertMany(data: [
+    {
+      id: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      username: "alex_explorer",
+      email: "alex@example.com",
+      bio: "Collector of rare artifacts."
+    },
+    {
+      id: "a8e9b6c4-72a1-4d3e-9087-123456789abc",
+      username: "bella_botanist",
+      email: "bella@example.com",
+      bio: "Just searching for rare herbs."
+    },
+    {
+      id: "d9c8b7a6-f5e4-4d3c-b2a1-0987654321fe",
+      username: "carl_climber",
+      email: "carl@example.com",
+      bio: "Seeking high-altitude treasures."
+    }
+  ])
+  item_insertMany(data: [
+    {
+      id: "10000000-0000-0000-0000-000000000001",
+      name: "Ancient Compass",
+      latitude: 45.523,
+      longitude: -122.676,
+      rarity: "Epic",
+      description: "Points to hidden fortunes."
+    },
+    {
+      id: "10000000-0000-0000-0000-000000000002",
+      name: "Golden Fern",
+      latitude: 34.052,
+      longitude: -118.243,
+      rarity: "Rare",
+      description: "A metallic botanical specimen."
+    },
+    {
+      id: "10000000-0000-0000-0000-000000000003",
+      name: "Mountain Ruby",
+      latitude: 40.712,
+      longitude: -74.006,
+      rarity: "Legendary",
+      description: "Found at the peak of the world."
+    }
+  ])
+  inventory_insertMany(data: [
+    {
+      userId: "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      itemId: "10000000-0000-0000-0000-000000000001",
+      dateCollected: "2023-10-01T10:00:00Z"
+    },
+    {
+      userId: "a8e9b6c4-72a1-4d3e-9087-123456789abc",
+      itemId: "10000000-0000-0000-0000-000000000002",
+      dateCollected: "2023-10-02T12:30:00Z"
+    },
+    {
+      userId: "d9c8b7a6-f5e4-4d3c-b2a1-0987654321fe",
+      itemId: "10000000-0000-0000-0000-000000000003",
+      dateCollected: "2023-10-03T15:45:00Z"
+    }
+  ])
+  locationLog_insertMany(data: [
+    {
+      itemId: "10000000-0000-0000-0000-000000000001",
+      latitude: 45.524,
+      longitude: -122.677
+    },
+    {
+      itemId: "10000000-0000-0000-0000-000000000002",
+      latitude: 34.053,
+      longitude: -118.244
+    },
+    {
+      itemId: "10000000-0000-0000-0000-000000000003",
+      latitude: 40.713,
+      longitude: -74.007
+    }
+  ])
+}
